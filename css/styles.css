@@ -4,33 +4,31 @@ body {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 16pt;
+  line-height: 1.5;
 }
 
-.header {
-  display: flex;
-  background: linear-gradient(var(--mainColor), var(--mainColor));
-  align-items: center;
-  justify-content: center;
-}
-
-.headerbg {
-  flex: 1;
+.headerimg {
   background: linear-gradient(var(--mainColor), var(--mainColor)),
-    url("../assets/ProfilePic.jpg");
+    url("../assets/ProfilePic1.jpg");
   background-repeat: no-repeat;
-  background-position: 50% top;
-  min-height: 100vh;
-  max-width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
 .headertext {
   text-align: right;
-  align-self: center;
   color: #fff;
   padding: 1.5rem;
 }
@@ -46,13 +44,56 @@ img {
 }
 
 .actionbutton {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 2.5rem;
+  height: 3rem;
+  width: 3rem;
+  line-height: 1.4;
+  margin-top: 1rem;
+  text-align: center;
+  border-radius: 50%;
   background-color: var(--actionColor);
   border: none;
   font-family: Montserrat;
+}
+
+.actionbutton:focus,
+.actionbutton:active {
+  outline: none;
+}
+
+a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+@media (min-width: 470px) {
+  .headerimg {
+    background-size: contain;
+    background-position: left;
+  }
+  .headertext {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 470px) and (orientation: landscape) {
+  .headerimg {
+    background-size: contain;
+    background-position: left;
+  }
+  .buttoncontainer {
+    display: inline;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 5.9vw;
+  }
+  h2 {
+    font-size: 2.1vw;
+  }
+  .headertext {
+    padding: 3rem;
+  }
 }
